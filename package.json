@@ -10,6 +10,7 @@
 	},
 	"devDependencies": {
 		"@architect/sandbox": "^3.4.1",
+		"@sveltejs/adapter-begin": "^1.0.0-next.0",
 		"@sveltejs/adapter-node": "next",
 		"@sveltejs/kit": "next",
 		"@typescript-eslint/eslint-plugin": "^4.19.0",
