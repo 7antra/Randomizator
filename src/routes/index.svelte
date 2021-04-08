@@ -25,6 +25,10 @@
 			-moz-user-select: none;
 			-ms-user-select: none;
 			user-select: none;
+
+			@media (max-width: 600px) {
+				font-size: 31.2vh;
+			}
 		}
 	}
 </style>
