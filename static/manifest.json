@@ -13,8 +13,8 @@
 			"purpose": "any maskable"
 		},
 		{
-			"src": "https://randomizator.poker/random-500.png",
-			"sizes": "500x500",
+			"src": "https://randomizator.poker/random-512.png",
+			"sizes": "512x512",
 			"type": "image/png"
 		}
 	]

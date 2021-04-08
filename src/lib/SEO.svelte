@@ -3,7 +3,7 @@
 	export let description =
 		'Randomization tools in PWA to make better decisions and implementation in live poker';
 	export let url = 'https://randomizator.poker/';
-	export let image = 'https://randomizator.poker/random-500.png';
+	export let image = 'https://randomizator.poker/random-512.png';
 	export let imageType = null;
 	export let type = 'website';
 	export let locale = 'en_US';
