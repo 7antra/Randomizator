@@ -9,8 +9,6 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
-		"@architect/sandbox": "^3.4.1",
-		"@sveltejs/adapter-begin": "next",
 		"@sveltejs/adapter-node": "next",
 		"@sveltejs/kit": "next",
 		"@typescript-eslint/eslint-plugin": "^4.19.0",
