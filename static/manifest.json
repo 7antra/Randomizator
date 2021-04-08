@@ -1,0 +1,21 @@
+{
+	"background_color": "#ebebeb",
+	"theme_color": "#202020",
+	"name": "Randomizator.poker",
+	"short_name": "Randomizator",
+	"display": "fullscreen",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "https://randomizator.poker/random-192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "https://randomizator.poker/random-500.png",
+			"sizes": "500x500",
+			"type": "image/png"
+		}
+	]
+}
