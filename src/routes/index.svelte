@@ -6,7 +6,7 @@
 	// let arr = [];
 
 	let count: number = 0;
-	let intro = tweened(0, {
+	let intro = tweened(1, {
 		easing: quadOut,
 		duration: 1200
 	});
