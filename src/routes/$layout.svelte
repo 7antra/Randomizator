@@ -5,8 +5,6 @@
 	import '../app.scss';
 </script>
 
-<Gtm id="GTM-P7D7JW7" />
-
 <Seo />
 
 <slot />
