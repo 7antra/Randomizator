@@ -26,7 +26,11 @@
 			-ms-user-select: none;
 			user-select: none;
 
-			@media (max-width: 600px) {
+			// @media (max-width: 600px) {
+			// 	font-size: 31.2vh;
+			// }
+
+			@media screen and (max-aspect-ratio: 1/1) {
 				font-size: 31.2vh;
 			}
 		}
