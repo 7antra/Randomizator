@@ -1,7 +1,8 @@
 <script>
-	import { browser } from '$app/env';
+	import { onMount } from 'svelte';
+
 	export let id;
-	if (browser) {
+	onMount(() => {
 		(function (w, d, s, l, i) {
 			w[l] = w[l] || [];
 			w[l].push({
@@ -15,7 +16,7 @@
 			j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
 			f.parentNode.insertBefore(j, f);
 		})(window, document, 'script', 'dataLayer', `${id}`);
-	}
+	});
 </script>
 
 <noscript>
