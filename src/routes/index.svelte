@@ -69,6 +69,10 @@
 
 			@media screen and (max-aspect-ratio: 1/1) {
 				font-size: 31.2vh;
+
+				&.three {
+					font-size: 21.8vh;
+				}
 			}
 		}
 
