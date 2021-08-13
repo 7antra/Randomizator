@@ -2,6 +2,8 @@
 	import { onMount } from 'svelte';
 	import { tweened } from 'svelte/motion';
 	import { quadOut } from 'svelte/easing';
+	import Plant from '$lib/svg/Plant.svelte';
+	import Ruller from '$lib/Ruller.svelte';
 
 	// let arr = [];
 
@@ -15,10 +17,12 @@
 		color1: '#000000',
 		color2: '#ebebeb',
 		ruller: {
+			visible: false,
 			nb: 4,
 			type: 2,
 			width: 10
-		}
+		},
+		reverseHalf: true
 	};
 
 	$: count = $intro;
@@ -30,42 +34,21 @@
 		count = Math.floor(Math.random() * 100) + 1;
 	};
 
-	$: style = `
+	let style = `
 		--rullerNb: ${config.ruller.nb};
-		--color1: ${config.color1}
-		--color2: ${config.color2}
+		--color1: ${config.color1};
+		--color2: ${config.color2};
 	`;
-
-	// const test = () => {
-	// 	arr = [];
-	// 	for (let i = 0; i < 1000; i++) {
-	// 		randomise();
-	// 		arr.push(count);
-	// 	}
-	// 	console.log('arr : ', arr);
-	// };
-
-	// $: arr;
 </script>
 
-<main on:click={randomise} {style}>
-	{#if config.ruller.type == 1}
-		<div class="fill" style="height: {~~count}%" />
+<main on:click={randomise} {style} class:reverse={config.reverseHalf && count > 50}>
+	{#if config.ruller.visible}
+		<Ruller conf={config.ruller} {count} />
 	{/if}
-	<div class="ruller _{config.ruller.type}">
-		{#each Array(config.ruller.nb) as _, i}
-			<div
-				class:active={count >= (100 / config.ruller.nb) * (i + 1)}
-				style="top: {(100 / config.ruller.nb) * i}%"
-			/>
-		{/each}
-	</div>
 	<h1 class:three={count.toString().length === 3}>{~~count}</h1>
-	<!-- <button on:click={test}>test</button>
-	<div class="test">
-		{#each arr as x}
-			<div style={`grid-column: ${x - 1}/${x};`} />
-		{/each}
+
+	<!-- <div class="config">
+		<Plant />
 	</div> -->
 </main>
 
@@ -76,51 +59,20 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: var(--color1);
+		background-color: var(--color2);
 		position: relative;
+		transition: background-color 0.2s ease-in;
 
-		.ruller {
-			width: 100%;
-			position: absolute;
-			height: 100%;
+		&.reverse {
+			background-color: var(--color1);
 
-			div {
-				position: absolute;
-				width: 10%;
-				height: 1px;
-				background-color: var(--color1);
-				mix-blend-mode: difference;
+			h1 {
+				color: var(--color2);
 			}
 
-			&._2 {
-				top: 82%;
-				width: 61.8%;
-				height: 5vh;
-				border: 1px solid black;
-				display: grid;
-				gap: 1px;
-				grid-template-columns: repeat(var(--rullerNb), 1fr);
-
-				div {
-					position: relative;
-					width: 100%;
-					height: 100%;
-					position: relative;
-					top: 0 !important;
-					&.active {
-						background-color: black;
-					}
-				}
+			:global(.fill) {
+				background-color: var(--color2);
 			}
-		}
-
-		.fill {
-			width: 100%;
-			position: absolute;
-			bottom: 0;
-			height: 50%;
-			background: var(--color2);
-			transition: height 0.2s ease-in-out;
 		}
 
 		h1 {
@@ -131,12 +83,9 @@
 			-ms-user-select: none;
 			user-select: none;
 			transition: all 1s;
-			color: var(--color1);
+			color: var(--color2);
 			transform: translateY(-0.08ch);
-
-			// @media (max-width: 600px) {
-			// 	font-size: 31.2vh;
-			// }
+			transition: background-color 0.2s ease-in;
 
 			&.three {
 				font-size: 51.8vh;
@@ -150,19 +99,5 @@
 				}
 			}
 		}
-
-		// .test {
-		// 	display: grid;
-		// 	position: fixed;
-		// 	bottom: 2vh;
-		// 	left: 2vh;
-		// 	width: calc(100vw - 4vh);
-		// 	grid-template-columns: repeat(100, 1fr);
-
-		// 	div {
-		// 		height: 2px;
-		// 		background-color: red;
-		// 	}
-		// }
 	}
 </style>
