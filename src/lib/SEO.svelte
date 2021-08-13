@@ -1,7 +1,7 @@
 <script lang="ts">
-	export let title = 'Randomizator Poker | 100% random';
+	export let title = 'Randomizer Poker | 100% random - GTO strategy';
 	export let description =
-		'Randomization tools in PWA to make better decisions and implementation in live poker';
+		'Randomization tools in PWA to make better decisions and implementation GTO strategy in live poker';
 	export let url = 'https://randomizator.poker/';
 	export let image = 'https://randomizator.poker/random-512.png';
 	export let imageType = null;
