@@ -1,9 +1,9 @@
 <script lang="ts">
-	export let title = 'Randomizer Poker | 100% random - GTO strategy';
+	export let title = 'Randomizer Poker | Random Number Generator 100% GTO strategy';
 	export let description =
-		'Randomization tools in PWA to make better decisions and implementation GTO strategy in live poker';
-	export let url = 'https://randomizator.poker/';
-	export let image = 'https://randomizator.poker/random-512.png';
+		'Randomizer Poker is a random number generator - 100% - simple app in PWA desktop and mobile to make better decisions with GTO strategy in online poker';
+	export let url = 'https://randomizer.poker/';
+	export let image = 'https://randomizer.poker/random-512.png';
 	export let imageType = null;
 	export let type = 'website';
 	export let locale = 'en_US';
