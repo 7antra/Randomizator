@@ -1,19 +1,19 @@
 {
 	"background_color": "#ebebeb",
 	"theme_color": "#202020",
-	"name": "Randomizator.poker",
-	"short_name": "Randomizator",
+	"name": "Randomizer.poker",
+	"short_name": "Randomizer",
 	"display": "fullscreen",
 	"start_url": "/",
 	"icons": [
 		{
-			"src": "https://randomizator.poker/random-192.png",
+			"src": "https://randomizer.poker/random-192.png",
 			"sizes": "192x192",
 			"type": "image/png",
 			"purpose": "any maskable"
 		},
 		{
-			"src": "https://randomizator.poker/random-512.png",
+			"src": "https://randomizer.poker/random-512.png",
 			"sizes": "512x512",
 			"type": "image/png"
 		}
